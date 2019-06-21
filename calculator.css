@@ -1,0 +1,95 @@
+#background {
+  background-color: black;
+  color: white;
+  width: 320px;
+  height: 556px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#monitor {
+  background-color: darkblue;
+  width: 290px;
+  height: 145px;
+  border-radius: 10px;
+  font-size: 80px;
+  display: flex;
+  flex-direction: raw;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#buttons {
+  /*background-color: blueviolet;*/
+  width: 304px;
+  height: 396px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  align-content: flex-start;
+}
+#calculations {
+  width: 76px;
+  height: 396px;
+  display: flex;
+  flex-direction: raw;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+#operations {
+  width: 228px;
+  height: 76px;
+  display: flex;
+  flex-direction: raw;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+#numbers {
+  width: 228px;
+  height: 304px;
+  display: flex;
+  flex-direction: raw;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+button {
+  color: white;
+  border: 0px;
+  width: 66px;
+  height: 66px;
+  border-radius: 33px;
+  font-size: 35px;
+  outline: none;
+  margin: 5px;
+  flex-grow: 1;
+}
+.number_button {
+  background-color: #383838;
+}
+.opera_button {
+  background-color: #787878;
+  color: black;
+}
+.calcul_button {
+  background-color: #FF9900;
+}
+#horizontal {
+  background-color: brown;
+  color: darkgrey;
+}
+#horizontal:active {
+  background-color: #A8A8A8;
+  color: brown;
+}
+.number_button:active {
+  background-color: #A8A8A8;
+}
+.opera_button:active {
+  background-color: #A8A8A8;
+}
+.calcul_button:focus {
+  background-color: #F0F0F0;
+  color: #FF9900;
+}
