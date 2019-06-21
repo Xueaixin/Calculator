@@ -3,11 +3,13 @@
 
 ## Purpose
 
-create a calculator
+Create a calculator
 
 ## Languages
 
-HTML,CSS,JavaScript
+* HTML
+* CSS
+* JavaScript
 
 ## Introduction
 
@@ -17,9 +19,8 @@ HTML,CSS,JavaScript
 
 ### Arithmetic calculator
 
-#### Font-size
-
-* **six_digit:** 80px
-* **seven_digit:** 69px
-* **eight_digit:** 61px
-* **nine_digit:** 54px
+* Font-size
+  * **six_digit:** 80px
+  * **seven_digit:** 69px
+  * **eight_digit:** 61px
+  * **nine_digit:** 54px
