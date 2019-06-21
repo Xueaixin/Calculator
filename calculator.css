@@ -20,8 +20,10 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+#view {
+  /*background-color: aqua;*/
+}
 #buttons {
-  /*background-color: blueviolet;*/
   width: 304px;
   height: 396px;
   border-radius: 15px;

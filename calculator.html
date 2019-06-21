@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <title>自制计算器</title>
 <link rel="stylesheet" type="text/css" href="calculator.css">
+<script type="text/javascript" src="calculator.js"></script>
 </head>
 <body>
   <div id = "background">
@@ -11,11 +12,11 @@
     </div>
     <div id = "buttons">
       <div id = "calculations">
-        <button type = "button" class = "calcul_button" id = "divide">÷</button>
-        <button type = "button" class = "calcul_button" id = "multiply">×</button>
-        <button type = "button" class = "calcul_button" id = "minus">-</button>
-        <button type = "button" class = "calcul_button" id = "plus">+</button>
-        <button type = "button" class = "calcul_button" id = "division">=</button>
+        <button type = "button" class = "calcul_button" id = "divide" onclick = "calculate('÷')">÷</button>
+        <button type = "button" class = "calcul_button" id = "multiply" onclick = "calculate('×')">×</button>
+        <button type = "button" class = "calcul_button" id = "minus" onclick = "calculate('-')">-</button>
+        <button type = "button" class = "calcul_button" id = "plus" onclick = "calculate('+')">+</button>
+        <button type = "button" class = "calcul_button" id = "division" onclick = "calculate('=')">=</button>
       </div>
       <div id = "operations">
         <button type = "button" class = "opera_button" id = "horizontal">H</button>
@@ -23,18 +24,18 @@
         <button type = "button" class = "opera_button" id = "percentage">%</button>
       </div>
       <div id = "numbers">
-        <button type = "button" class = "number_button" id = "seven">7</button>
-        <button type = "button" class = "number_button" id = "eight">8</button>
-        <button type = "button" class = "number_button" id = "nine">9</button>
-        <button type = "button" class = "number_button" id = "four">4</button>
-        <button type = "button" class = "number_button" id = "five">5</button>
-        <button type = "button" class = "number_button" id = "six">6</button>
-        <button type = "button" class = "number_button" id = "one">1</button>
-        <button type = "button" class = "number_button" id = "two">2</button>
-        <button type = "button" class = "number_button" id = "three">3</button>
-        <button type = "button" class = "number_button" id = "clear">C</button>
-        <button type = "button" class = "number_button" id = "zero">0</button>
-        <button type = "button" class = "number_button" id = "point">.</button>
+        <button type = "button" class = "number_button" id = "seven" onclick = "inputNumber('7')">7</button>
+        <button type = "button" class = "number_button" id = "eight" onclick = "inputNumber('8')">8</button>
+        <button type = "button" class = "number_button" id = "nine" onclick = "inputNumber('9')">9</button>
+        <button type = "button" class = "number_button" id = "four" onclick = "inputNumber('4')">4</button>
+        <button type = "button" class = "number_button" id = "five" onclick = "inputNumber('5')">5</button>
+        <button type = "button" class = "number_button" id = "six" onclick = "inputNumber('6')">6</button>
+        <button type = "button" class = "number_button" id = "one" onclick = "inputNumber('1')">1</button>
+        <button type = "button" class = "number_button" id = "two" onclick = "inputNumber('2')">2</button>
+        <button type = "button" class = "number_button" id = "three" onclick = "inputNumber('3')">3</button>
+        <button type = "button" class = "number_button" id = "clear" onclick = "clearScreen()">AC</button>
+        <button type = "button" class = "number_button" id = "zero" onclick="inputNumber('0')">0</button>
+        <button type = "button" class = "number_button" id = "point" onclick="inputNumber('.')">.</button>
       </div>
     </div>
   </div>
