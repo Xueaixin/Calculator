@@ -12,16 +12,16 @@
     </div>
     <div id = "buttons">
       <div id = "calculations">
-        <button type = "button" class = "calcul_button" id = "divide" onclick = "calculate('÷')">÷</button>
-        <button type = "button" class = "calcul_button" id = "multiply" onclick = "calculate('×')">×</button>
-        <button type = "button" class = "calcul_button" id = "minus" onclick = "calculate('-')">-</button>
-        <button type = "button" class = "calcul_button" id = "plus" onclick = "calculate('+')">+</button>
-        <button type = "button" class = "calcul_button" id = "division" onclick = "calculate('=')">=</button>
+        <button type = "button" class = "calcul_button" id = "divide" onclick = "inputOperator('÷')">÷</button>
+        <button type = "button" class = "calcul_button" id = "multiply" onclick = "inputOperator('×')">×</button>
+        <button type = "button" class = "calcul_button" id = "minus" onclick = "inputOperator('-')">-</button>
+        <button type = "button" class = "calcul_button" id = "plus" onclick = "inputOperator('+')">+</button>
+        <button type = "button" class = "calcul_button" id = "division" onclick = "getResult()">=</button>
       </div>
       <div id = "operations">
-        <button type = "button" class = "opera_button" id = "horizontal">H</button>
-        <button type = "button" class = "opera_button" id = "negative">+/-</button>
-        <button type = "button" class = "opera_button" id = "percentage">%</button>
+        <button type = "button" class = "opera_button" id = "horizontal" onclick="changeToVer()">H</button>
+        <button type = "button" class = "opera_button" id = "negative" onclick = "getOpponent()">+/-</button>
+        <button type = "button" class = "opera_button" id = "percentage" onclick = "getPercentage()">%</button>
       </div>
       <div id = "numbers">
         <button type = "button" class = "number_button" id = "seven" onclick = "inputNumber('7')">7</button>
