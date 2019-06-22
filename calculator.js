@@ -1,5 +1,4 @@
 var global_values = {
-  pre_result : 0,
   can_add_operator: true,
   is_new_number : false,//输入新数字
   can_all_clear : true, //可以全清除
@@ -90,8 +89,10 @@ function addComma(new_number) {
         new_number.substr(length_of_integer, new_number.length - length_of_integer);
   }
   if(temp_number.indexOf('-') != -1){
+    // alert("you -");
     if(temp_number.charAt(temp_number.indexOf('-') + 1) == ','){
-      temp_number.replace(',', '');
+      // alert("shan,");
+      temp_number = temp_number.replace(',', '');
     }
   }
   return temp_number;
@@ -234,7 +235,8 @@ function inputOperator(operator) {
         else {
           var temp_operator = global_values.all_operators.pop();
           calculate(temp_operator);
-          showResult();
+          var current_result = global_values.all_numbers[global_values.all_numbers.length - 1];
+          showResult(current_result);
           global_values.all_operators.push(operator);
         }
         global_values.can_add_operator = false;
@@ -243,8 +245,8 @@ function inputOperator(operator) {
   }
 }
 
-function showResult() {
-  var current_result = global_values.all_numbers[global_values.all_numbers.length - 1];
+function showResult(curr_result) {
+  var current_result = curr_result; 
   var index_of_point = current_result.indexOf('.');
   var length_of_result = current_result.replace('.', '').length;
   if(length_of_result > 9) {
@@ -256,9 +258,13 @@ function showResult() {
       length_of_integer = index_of_point;
     }
     if(length_of_integer > 9) {
-      document.getElementById('view').innerText = "E";
-      global_values.all_numbers = new Array();
-      global_values.all_operators = new Array();
+      current_result = "E";
+      global_values.all_numbers = [];
+      global_values.all_operators = [];
+      can_add_operator = true;
+      is_new_number = false;//输入新数字
+      can_all_clear = true; //可以全清除
+      is_has_result = false;
     }
     else {
       if(length_of_integer == 9) {
@@ -291,7 +297,8 @@ function getResult() {
     last_number = global_values.all_numbers[1];
     calculate(temp_operator);
   }
-  showResult();
+  var current_result = global_values.all_numbers[global_values.all_numbers.length - 1];
+  showResult(current_result);
   global_values.all_numbers.push(last_number);
   global_values.all_operators.push(last_operator);
   global_values.is_new_number = true;
@@ -300,25 +307,41 @@ function getResult() {
 }
 function getOpponent() {
   if(global_values.is_has_result) {
-    global_values.all_numbers[0] = '-' + global_values.all_numbers[0];
-    showResult();
+    var current_result = global_values.all_numbers[0];
+    var to_number = 0 - Number(current_result);
+    current_result = to_number.toString();
+    showResult(current_result);
   }
   else {
-    document.getElementById('view').innerText = '-' + document.getElementById('view').innerText;
+    var current_result = document.getElementById('view').innerText.replace(/,/g, '');
+    var to_number = 0 - Number(current_result);
+    current_result = to_number.toString();
+    showResult(current_result);
   }
 }
-function getPercentange() {
+function getPercentage() {
+  // alert('temp');
   if(global_values.is_has_result) {
+    // alert('temp1');
     var temp = Number(global_values.all_numbers[0]);
+    // alert('temp2');
     temp = temp / 100;
     global_values.all_numbers[0] = temp.toString();
+    // alert('temp3');
     showResult();
+    // alert('temp4');
   }
   else {
-    var temp = Number(document.getElementById('view').replace(/,/g, ''));
-    temp /= 100;
-    document.getElementById('view').innerText = temp.toString();
+    // alert('temp5');
+    var temp = Number(document.getElementById('view').innerText.replace(/,/g, ''));
+    // alert('temp6');
+    temp = temp / 100;
+    // alert('temp7');
+    var current_result = temp.toString();
+    // alert('temp8');
+    showResult(current_result);
   }
+  // alert('temp9');
 }
 function changeToVer() {
   alert("暂时未完成！");
