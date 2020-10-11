@@ -1,43 +1,46 @@
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>自制计算器</title>
-<link rel="stylesheet" type="text/css" href="calculator.css">
-<script type="text/javascript" src="calculator.js"></script>
+  <meta charset="utf-8">
+  <title>自制计算器</title>
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+  <script type="text/javascript" src="calculator.js"></script>
 </head>
+
 <body>
-  <div id = "background">
-    <div id = "monitor">
-      <span id = "view">0</span>
+  <div id="background">
+    <div id="monitor">
+      <span id="view">0</span>
     </div>
-    <div id = "buttons">
-      <div id = "calculations">
-        <button type = "button" class = "calcul_button" id = "divide" onclick = "inputOperator('÷')">÷</button>
-        <button type = "button" class = "calcul_button" id = "multiply" onclick = "inputOperator('×')">×</button>
-        <button type = "button" class = "calcul_button" id = "minus" onclick = "inputOperator('-')">-</button>
-        <button type = "button" class = "calcul_button" id = "plus" onclick = "inputOperator('+')">+</button>
-        <button type = "button" class = "calcul_button" id = "division" onclick = "getResult()">=</button>
+    <div id="buttons">
+      <div id="calculations">
+        <button type="button" class="calcul_button" id="divide" onclick="inputOperator('÷')">÷</button>
+        <button type="button" class="calcul_button" id="multiply" onclick="inputOperator('×')">×</button>
+        <button type="button" class="calcul_button" id="minus" onclick="inputOperator('-')">-</button>
+        <button type="button" class="calcul_button" id="plus" onclick="inputOperator('+')">+</button>
+        <button type="button" class="calcul_button" id="division" onclick="getResult()">=</button>
       </div>
-      <div id = "operations">
-        <button type = "button" class = "opera_button" id = "horizontal" onclick="changeToVer()">H</button>
-        <button type = "button" class = "opera_button" id = "negative" onclick = "getOpponent()">+/-</button>
-        <button type = "button" class = "opera_button" id = "percentage" onclick = "getPercentage()">%</button>
+      <div id="operations">
+        <button type="button" class="opera_button" id="horizontal" onclick="changeToVer()">H</button>
+        <button type="button" class="opera_button" id="negative" onclick="getOpponent()">+/-</button>
+        <button type="button" class="opera_button" id="percentage" onclick="getPercentage()">%</button>
       </div>
-      <div id = "numbers">
-        <button type = "button" class = "number_button" id = "seven" onclick = "inputNumber('7')">7</button>
-        <button type = "button" class = "number_button" id = "eight" onclick = "inputNumber('8')">8</button>
-        <button type = "button" class = "number_button" id = "nine" onclick = "inputNumber('9')">9</button>
-        <button type = "button" class = "number_button" id = "four" onclick = "inputNumber('4')">4</button>
-        <button type = "button" class = "number_button" id = "five" onclick = "inputNumber('5')">5</button>
-        <button type = "button" class = "number_button" id = "six" onclick = "inputNumber('6')">6</button>
-        <button type = "button" class = "number_button" id = "one" onclick = "inputNumber('1')">1</button>
-        <button type = "button" class = "number_button" id = "two" onclick = "inputNumber('2')">2</button>
-        <button type = "button" class = "number_button" id = "three" onclick = "inputNumber('3')">3</button>
-        <button type = "button" class = "number_button" id = "clear" onclick = "clearScreen()">AC</button>
-        <button type = "button" class = "number_button" id = "zero" onclick="inputNumber('0')">0</button>
-        <button type = "button" class = "number_button" id = "point" onclick="inputNumber('.')">.</button>
+      <div id="numbers">
+        <button type="button" class="number_button" id="seven" onclick="inputNumber('7')">7</button>
+        <button type="button" class="number_button" id="eight" onclick="inputNumber('8')">8</button>
+        <button type="button" class="number_button" id="nine" onclick="inputNumber('9')">9</button>
+        <button type="button" class="number_button" id="four" onclick="inputNumber('4')">4</button>
+        <button type="button" class="number_button" id="five" onclick="inputNumber('5')">5</button>
+        <button type="button" class="number_button" id="six" onclick="inputNumber('6')">6</button>
+        <button type="button" class="number_button" id="one" onclick="inputNumber('1')">1</button>
+        <button type="button" class="number_button" id="two" onclick="inputNumber('2')">2</button>
+        <button type="button" class="number_button" id="three" onclick="inputNumber('3')">3</button>
+        <button type="button" class="number_button" id="clear" onclick="clearScreen()">AC</button>
+        <button type="button" class="number_button" id="zero" onclick="inputNumber('0')">0</button>
+        <button type="button" class="number_button" id="point" onclick="inputNumber('.')">.</button>
       </div>
     </div>
   </div>
 </body>
+
 </html>
